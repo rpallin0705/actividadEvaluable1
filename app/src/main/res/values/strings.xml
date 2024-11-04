@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">actividadEv1</string>
 
+    <!-- fichero shared preferences -->
+    <string name="name_prefered_shared_fich">shared_file</string>
+    <!-- Teléfono a almacenar -->
+    <string name="name_shared_phone">shared_file</string>
+
     <!-- Url que abrirá el botón web -->
-    <string name="web_url">https://bleach-exhibition.com</string>
+    <string name="web_url">https://www.google.com</string>
 </resources>
