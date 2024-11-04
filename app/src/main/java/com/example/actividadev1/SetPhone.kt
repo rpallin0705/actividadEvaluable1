@@ -15,7 +15,9 @@ class SetPhone : AppCompatActivity() {
     private lateinit var sharedFile: SharedPreferences
     private lateinit var nameSharedPhone: String
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
+        TODO("CONDIGURAAAR INTENT IMPLICITO")
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_set_phone)
