@@ -47,10 +47,16 @@ class MainActivity : AppCompatActivity() {
             val calendar = Calendar.getInstance()
             calendar.add(Calendar.MINUTE, 2)
 
+            /*
+            * val explicitIntent = Intent("com.example.action.APP_ACTION")
+            * explicitIntent.setPackage(context.getPackageName())
+            * context.startActivity(explicitIntent)
+            * */
+
             val intent = Intent(AlarmClock.ACTION_SET_ALARM).apply {
                 putExtra(AlarmClock.EXTRA_MESSAGE, "Capítulo nuevo!1")
-                putExtra(AlarmClock.EXTRA_HOUR, calendar.get(Calendar.HOUR_OF_DAY))
-                putExtra(AlarmClock.EXTRA_MINUTES, calendar.get(Calendar.MINUTE))
+                putExtra(AlarmClock.EXTRA_HOUR, calendar[Calendar.HOUR_OF_DAY])
+                putExtra(AlarmClock.EXTRA_MINUTES, calendar[Calendar.MINUTE])
                 putExtra(AlarmClock.EXTRA_SKIP_UI, false)
             }
 
@@ -64,7 +70,7 @@ class MainActivity : AppCompatActivity() {
                 ).show()
             }
         }
-        mainBinding.phoneButton.setOnClickListener{
+        mainBinding.phoneButton.setOnClickListener {
             val intent = Intent(this@MainActivity, SetPhone::class.java)
             intent.apply { addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT) }
             startActivity(intent)

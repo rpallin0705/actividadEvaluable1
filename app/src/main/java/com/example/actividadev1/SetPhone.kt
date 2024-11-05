@@ -17,10 +17,11 @@ class SetPhone : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        TODO("CONDIGURAAAR INTENT IMPLICITO")
+
         super.onCreate(savedInstanceState)
+        setPhoneBinding = ActivitySetPhoneBinding.inflate(layoutInflater)
+        setContentView(setPhoneBinding.root)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_set_phone)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
