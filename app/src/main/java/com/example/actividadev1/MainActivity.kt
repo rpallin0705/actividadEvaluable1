@@ -25,10 +25,6 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    companion object {
-        const val TAG = "--- SALIDA ---"
-    }
-
     /**
      * Función que crea los Listener de todos los botones del aactivity
      */
