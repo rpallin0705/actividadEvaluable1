@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bck"
     tools:context=".MainActivity">
 
     <ImageView
@@ -20,40 +21,51 @@
 
     <Button
         android:id="@+id/phone_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="108dp"
-        android:text="Telefono"
+        app:backgroundTint="@null"
+        android:background="@drawable/main_buttons"
+        android:text="@string/telefono"
         app:layout_constraintStart_toStartOf="@+id/imageView3"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <Button
         android:id="@+id/web_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
         android:layout_marginTop="108dp"
-        android:layout_marginEnd="28dp"
-        android:text="web"
+        android:layout_marginEnd="16dp"
+        app:backgroundTint="@null"
+        android:background="@drawable/main_buttons"
+        android:text="@string/web"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="@+id/imageView3"
         app:layout_constraintTop_toBottomOf="@+id/imageView3"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/alarm_button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
         android:layout_marginTop="48dp"
-        android:text="AAlaaaarmaa"
+        app:backgroundTint="@null"
+        android:background="@drawable/main_buttons"
+        android:text="@string/alarma"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="@+id/phone_button"
         app:layout_constraintTop_toBottomOf="@+id/phone_button" />
 
     <Button
         android:id="@+id/maap_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
         android:layout_marginTop="48dp"
-        android:text="map"
+        app:backgroundTint="@null"
+        android:background="@drawable/main_buttons"
+        android:text="@string/map"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="@+id/web_button"
         app:layout_constraintTop_toBottomOf="@+id/web_button" />
 </androidx.constraintlayout.widget.ConstraintLayout>

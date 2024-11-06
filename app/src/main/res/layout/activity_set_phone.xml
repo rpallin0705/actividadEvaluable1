@@ -5,7 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SetPhone">
+    android:background="@drawable/bck"
+    tools:context=".SetPhoneActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -19,25 +20,28 @@
         app:srcCompat="@drawable/logo2" />
 
     <EditText
-        android:id="@+id/text_phone"
+        android:id="@+id/phone_number_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
         android:ems="10"
-        android:hint="Nº Teléfono"
+        android:maxLength="9"
+        android:hint="@string/n_tel_fono"
         android:inputType="phone"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/set_phone_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="96dp"
-        android:text="Establecer"
-        app:layout_constraintEnd_toEndOf="@+id/text_phone"
+        app:backgroundTint="@null"
+        android:background="@drawable/main_buttons"
+        android:text="@string/establecer"
+        app:layout_constraintEnd_toEndOf="@+id/phone_number_txt"
         app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="@+id/text_phone"
-        app:layout_constraintTop_toBottomOf="@+id/text_phone" />
+        app:layout_constraintStart_toStartOf="@+id/phone_number_txt"
+        app:layout_constraintTop_toBottomOf="@+id/phone_number_txt" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,8 +4,17 @@
     <!-- fichero shared preferences -->
     <string name="name_prefered_shared_fich">shared_file</string>
     <!-- Teléfono a almacenar -->
-    <string name="name_shared_phone">shared_file</string>
+    <string name="name_shared_phone"></string>
 
     <!-- Url que abrirá el botón web -->
-    <string name="web_url">https://www.google.com</string>
+    <string name="web_url">https://bleach-exhibition.com</string>
+    <string name="n_tel_fono">Nº Teléfono</string>
+    <string name="establecer">Establecer</string>
+    <string name="msg_new_phone">Introduce otro número de telefono</string>
+    <string name="telefono">Teléfono</string>
+    <string name="web">Web</string>
+    <string name="alarma">Alarma</string>
+    <string name="map">Map</string>
+    <string name="call">CALL</string>
+    <string name="back">BACK</string>
 </resources>
