@@ -1,6 +1,31 @@
 <resources>
     <string name="app_name">actividadEv1</string>
 
+    <!-- fichero shared preferences -->
+    <string name="name_prefered_shared_fich">shared_file</string>
+    <!-- Teléfono a almacenar -->
+    <string name="name_shared_phone"></string>
     <!-- Url que abrirá el botón web -->
     <string name="web_url">https://bleach-exhibition.com</string>
+    <!-- Ubicación que abrirá el mapa -->
+    <string name="map_location">Jomyoji, Kamakura, Kanagawa 248–0003, Japón</string>
+
+    <!-- Texto Botones -->
+    <string name="n_tel_fono">Nº Teléfono</string>
+    <string name="establecer">Establecer</string>
+    <string name="telefono">Teléfono</string>
+    <string name="web">Web</string>
+    <string name="alarma">Alarma</string>
+    <string name="map">Map</string>
+    <string name="call">CALL</string>
+    <string name="back">BACK</string>
+
+    <!-- Mensajes información -->
+    <string name="msg_new_phone">Introduce otro número de telefono</string>
+    <string name="missing_phone_number">Debe introducir un número de teléfono</string>
+    <string name="missing_phone_permission">Se necesita el permiso de llamada!</string>
+    <string name="deleted_phone_number">Número de teléfono borrado</string>
+    <string name="missing_phone_number2">No hay número de teléfono para llamar</string>
+    <string name="open_map_msg">Abriendo lugar bonito</string>
+    <string name="wrong_phone_format">El formato no es correcto</string>
 </resources>
