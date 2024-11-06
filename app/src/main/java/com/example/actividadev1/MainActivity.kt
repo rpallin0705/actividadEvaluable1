@@ -5,6 +5,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.provider.AlarmClock
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.actividadev1.databinding.ActivityMainBinding
@@ -32,6 +33,20 @@ class MainActivity : AppCompatActivity() {
         mainBinding.webButton.setOnClickListener { openWeb() }
         mainBinding.alarmButton.setOnClickListener { setAlarm() }
         mainBinding.phoneButton.setOnClickListener { openPhoneSetter() }
+        mainBinding.mapButton.setOnClickListener { openMap() }
+    }
+
+    private fun openMap() {
+
+        val address = getString(R.string.map_location)
+        val geoUri = Uri.parse("geo:0,0?q=${address}")
+
+        Toast.makeText(this, getString(R.string.open_map_msg), Toast.LENGTH_SHORT).show()
+        val mapIntent = Intent(Intent.ACTION_VIEW, geoUri).apply {
+            setPackage("com.google.android.apps.maps")
+        }
+        startActivity(mapIntent)
+
     }
 
     /**

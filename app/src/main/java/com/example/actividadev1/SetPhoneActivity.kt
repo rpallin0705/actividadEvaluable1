@@ -51,7 +51,7 @@ class SetPhoneActivity : AppCompatActivity() {
         val phoneNumber = setPhoneBinding.phoneNumberTxt.text.toString()
 
         if (phoneNumber.isEmpty()) {
-            Toast.makeText(this, "Debe introducir un número de teléfono", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, getString(R.string.missing_phone_number), Toast.LENGTH_LONG).show()
         } else {
             val editor = sharedFile.edit()
             editor.putString(nameSharedPhone, phoneNumber)
