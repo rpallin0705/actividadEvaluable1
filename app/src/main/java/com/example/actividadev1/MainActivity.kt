@@ -5,6 +5,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.provider.AlarmClock
+import android.view.animation.AnimationUtils
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -14,6 +15,7 @@ import java.util.Calendar
 class MainActivity : AppCompatActivity() {
 
     private lateinit var mainBinding: ActivityMainBinding
+    private var easterEggRunning: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,6 +32,7 @@ class MainActivity : AppCompatActivity() {
      * Función que crea los Listener de todos los botones del aactivity
      */
     private fun start() {
+        mainBinding.imageView3.setOnClickListener { easterEggSetter() }
         mainBinding.webButton.setOnClickListener { openWeb() }
         mainBinding.alarmButton.setOnClickListener { setAlarm() }
         mainBinding.phoneButton.setOnClickListener { openPhoneSetter() }
@@ -81,7 +84,6 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-
     /**
      * Abre un enlace web a la url que está establecidad en el fichero strings.xml
      */
@@ -92,5 +94,19 @@ class MainActivity : AppCompatActivity() {
         }
 
         startActivity(intent)
+    }
+
+    /**
+     * Funcion que hace un easterEgg en el mainActivity
+     */
+    private fun easterEggSetter() {
+        if (easterEggRunning) {
+            mainBinding.imageView3.clearAnimation()
+            easterEggRunning = false
+        } else {
+            val heartbeatAnimation = AnimationUtils.loadAnimation(this, R.anim.easter_egg)
+            mainBinding.imageView3.startAnimation(heartbeatAnimation)
+            easterEggRunning = true
+        }
     }
 }
