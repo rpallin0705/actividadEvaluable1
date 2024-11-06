@@ -52,6 +52,8 @@ class SetPhoneActivity : AppCompatActivity() {
 
         if (phoneNumber.isEmpty()) {
             Toast.makeText(this, getString(R.string.missing_phone_number), Toast.LENGTH_LONG).show()
+        } else if(phoneNumber.length < 9){
+            Toast.makeText(this, getString(R.string.wrong_phone_format), Toast.LENGTH_LONG).show()
         } else {
             val editor = sharedFile.edit()
             editor.putString(nameSharedPhone, phoneNumber)

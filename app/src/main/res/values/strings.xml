@@ -27,4 +27,5 @@
     <string name="deleted_phone_number">Número de teléfono borrado</string>
     <string name="missing_phone_number2">No hay número de teléfono para llamar</string>
     <string name="open_map_msg">Abriendo lugar bonito</string>
+    <string name="wrong_phone_format">El formato no es correcto</string>
 </resources>
